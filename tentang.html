@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Wallpaper Sapta - Tentang</title>
+<style>
+body{
+  font-family: Arial;
+  margin:0;
+  color:#222;
+}
+header{
+  background:linear-gradient(120deg,#0f172a,#1e3a5f,#0f766e,#134e4a);
+  background-size:300% 300%;
+  animation:headerGerak 12s ease infinite;
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+}
+header h1{
+  font-size:2.6em;
+  margin:0;
+  background:linear-gradient(90deg,#4ade80,#38bdf8,#a78bfa,#4ade80);
+  background-size:300% auto;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:teksGerak 6s linear infinite;
+  letter-spacing:1px;
+}
+header p{
+  color:#cbd5e1;
+  font-size:1.05em;
+  margin-top:10px;
+}
+@keyframes headerGerak{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+@keyframes teksGerak{
+  0%{background-position:0% center;}
+  100%{background-position:300% center;}
+}
+.menu{
+  background-color:#333;
+  text-align:center;
+  padding:15px;
+}
+.menu a{
+  color:white;
+  text-decoration:none;
+  padding:15px 25px;
+}
+.menu a:hover, .menu a.active{
+  background-color:#4CAF50;
+}
+.content{
+  width:80%;
+  float:left;
+  padding:20px;
+  box-sizing:border-box;
+}
+footer{
+  clear:both;
+  background:#666;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+#judul{
+  color:darkblue;
+}
+.highlight{
+  color:red;
+  font-weight:bold;
+}
+.formulir{
+  margin-top:20px;
+  border:1px solid black;
+  padding:15px;
+}
+
+/* ==== Visi Misi ==== */
+.grid-visimisi{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+  gap:15px;
+  margin:20px 0;
+}
+.kartu-visimisi{
+  background:#f7f7f7;
+  border-radius:6px;
+  padding:15px 18px;
+}
+.kartu-visimisi h3{
+  color:darkblue;
+  margin-top:0;
+}
+
+/* ==== Tim ==== */
+.grid-tim{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+  gap:15px;
+  margin:20px 0;
+  text-align:center;
+}
+.kartu-tim{
+  background:#fafafa;
+  border-radius:6px;
+  padding:15px;
+}
+.avatar-tim{
+  width:70px; height:70px;
+  border-radius:50%;
+  background:#4CAF50;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 10px;
+  font-size:22px;
+  font-weight:bold;
+}
+.kartu-tim p{
+  margin:2px 0;
+  font-size:13px;
+  color:#666;
+}
+
+/* ==== FAQ ==== */
+.faq-item{
+  border-bottom:1px solid #ddd;
+  padding:12px 0;
+}
+.faq-item h4{
+  margin:0 0 5px;
+  color:#333;
+}
+.faq-item p{
+  margin:0;
+  font-size:14px;
+  color:#555;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Wallpaper Sapta</h1>
+<p>Tentang Kami</p>
+</header>
+
+<div class="menu">
+<a href="index.html#beranda">Beranda</a>
+<a href="index.html#live">Wallpaper Live</a>
+<a href="galeri.html">Wallpaper</a>
+<a href="tentang.html" class="active">Tentang</a>
+</div>
+
+<div class="content">
+
+<h2 id="judul">Tentang Wallverse</h2>
+<p>
+<span class="highlight">Wallverse</span> adalah situs kumpulan wallpaper yang
+menyediakan dua jenis konten utama, yaitu
+<span class="highlight">Wallpaper Live</span> (bergerak terus)
+dan
+<span class="highlight">Galeri Foto</span> (wallpaper diam).
+Situs ini dibuat sebagai media untuk memperindah tampilan perangkat kalian, baik desktop maupun ponsel.
+</p>
+
+<div style="background:lightblue;padding:15px;">
+<h3>Informasi</h3>
+<p>
+Semua wallpaper di situs ini dibuat menggunakan kode HTML, CSS, dan SVG
+sehingga ringan diakses dan bisa dijalankan langsung di browser.
+</p>
+</div>
+
+<div class="grid-visimisi">
+  <div class="kartu-visimisi">
+    <h3>Visi</h3>
+    <p>Menjadi rujukan utama wallpaper live dan foto berkualitas tinggi yang
+    mudah diakses siapa saja.</p>
+  </div>
+  <div class="kartu-visimisi">
+    <h3>Misi</h3>
+    <p>Menyediakan koleksi wallpaper yang terus diperbarui, ringan digunakan,
+    serta gratis untuk seluruh pengguna.</p>
+  </div>
+</div>
+
+<h2>pembuat</h2>
+<div class="grid-tim">
+  <div class="kartu-tim">
+    <div class="avatar-tim">A</div>
+    <b>M. Hidayatullah</b>
+    <p>Pendiri & Pengembang</p>
+  </div>
+  <div class="kartu-tim">
+    <div class="avatar-tim">S</div>
+    <b>Gemini</b>
+    <p>Desainer Wallpaper</p>
+  </div>
+  <div class="kartu-tim">
+    <div class="avatar-tim">R</div>
+    <b>Claude</b>
+    <p>Pengelola Konten</p>
+  </div>
+</div>
+
+<h2>Pertanyaan Umum (FAQ)</h2>
+<div class="faq-item">
+  <h4>Apakah semua wallpaper gratis?</h4>
+  <p>Ya, seluruh wallpaper di situs ini dapat diunduh secara gratis.</p>
+</div>
+<div class="faq-item">
+  <h4>Apa perbedaan Wallpaper Live dan Galeri?</h4>
+  <p>Wallpaper Live bergerak/beranimasi terus menerus, sedangkan Galeri berisi
+  foto wallpaper yang diam/statis.</p>
+</div>
+<div class="faq-item">
+  <h4>Apakah wallpaper live memberatkan perangkat?</h4>
+  <p>Tidak, karena dibuat dengan kode ringan berbasis CSS dan SVG.</p>
+</div>
+
+<div class="formulir">
+<h3>Hubungi Kami</h3>
+<form>
+<label>Nama</label>
+<br><input type="text">
+<br><br>
+<label>Email</label>
+<br><input type="email">
+<br><br>
+<label>Pesan</label>
+<br><textarea rows="4" style="width:100%;"></textarea>
+<br><br>
+<input type="submit" value="Kirim">
+</form>
+</div>
+
+</div>
+
+<footer>
+Copyright © 2026 Wallverse
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Wallpaper Sapta - Beranda & Wallpaper Live</title>
+<style>
+body{
+  font-family: Arial;
+  margin:0;
+  color:#222;
+}
+header{
+  background:linear-gradient(120deg,#0f172a,#1e3a5f,#0f766e,#134e4a);
+  background-size:300% 300%;
+  animation:headerGerak 12s ease infinite;
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+}
+header h1{
+  font-size:2.6em;
+  margin:0;
+  background:linear-gradient(90deg,#4ade80,#38bdf8,#a78bfa,#4ade80);
+  background-size:300% auto;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:teksGerak 6s linear infinite;
+  letter-spacing:1px;
+}
+header p{
+  color:#cbd5e1;
+  font-size:1.05em;
+  margin-top:10px;
+}
+@keyframes headerGerak{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+@keyframes teksGerak{
+  0%{background-position:0% center;}
+  100%{background-position:300% center;}
+}
+.menu{
+  background-color:#333;
+  text-align:center;
+  padding:15px;
+}
+.menu a{
+  color:white;
+  text-decoration:none;
+  padding:15px 25px;
+}
+.menu a:hover, .menu a.active{
+  background-color:#4CAF50;
+}
+.content{
+  width:80%;
+  float:left;
+  padding:20px;
+  box-sizing:border-box;
+}
+footer{
+  clear:both;
+  background:#666;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+#judul{
+  color:darkblue;
+}
+.highlight{
+  color:red;
+  font-weight:bold;
+}
+.formulir{
+  margin-top:20px;
+  border:1px solid black;
+  padding:15px;
+}
+
+/* ==== Hero ==== */
+.hero{
+  background:linear-gradient(120deg,#2c3e50,#4CA1AF);
+  color:white;
+  padding:40px 20px;
+  border-radius:8px;
+  text-align:center;
+  margin-bottom:20px;
+}
+.hero h2{ margin-top:0; }
+.tombol{
+  display:inline-block;
+  background:#4CAF50;
+  color:white;
+  padding:10px 20px;
+  border-radius:4px;
+  text-decoration:none;
+  margin-top:10px;
+}
+.tombol:hover{ background:#3e8e41; }
+
+/* ==== Statistik ==== */
+.statistik{
+  display:flex;
+  justify-content:space-around;
+  text-align:center;
+  margin:25px 0;
+  flex-wrap:wrap;
+}
+.statistik div{
+  padding:10px 20px;
+}
+.statistik h3{
+  color:darkblue;
+  margin-bottom:0;
+}
+
+/* ==== Kategori ==== */
+.grid-kategori{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+  gap:12px;
+  margin:15px 0 25px;
+}
+.kategori-item{
+  background:#f2f2f2;
+  border-radius:6px;
+  text-align:center;
+  padding:15px 10px;
+  font-weight:bold;
+  color:#333;
+  border:1px solid #ddd;
+}
+.kategori-item:hover{
+  background:#e8f5e9;
+  border-color:#4CAF50;
+}
+
+/* ==== Wallpaper Live ==== */
+.live-wallpaper{
+  position:relative;
+  width:100%;
+  height:300px;
+  border-radius:8px;
+  overflow:hidden;
+  background:linear-gradient(270deg,#ff7e5f,#feb47b,#86a8e7,#91eae4);
+  background-size:800% 800%;
+  animation:gerakGradient 12s ease infinite;
+}
+@keyframes gerakGradient{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+.live-wallpaper .bulatan{
+  position:absolute;
+  border-radius:50%;
+  background:rgba(255,255,255,0.35);
+  animation:melayang linear infinite;
+}
+@keyframes melayang{
+  0%{ transform:translateY(0) translateX(0); }
+  50%{ transform:translateY(-40px) translateX(20px); }
+  100%{ transform:translateY(0) translateX(0); }
+}
+.b1{width:60px;height:60px; top:40px; left:10%; animation-duration:6s;}
+.b2{width:90px;height:90px; top:150px; left:40%; animation-duration:9s;}
+.b3{width:40px;height:40px; top:80px; left:70%; animation-duration:5s;}
+.b4{width:120px;height:120px; top:180px; left:80%; animation-duration:11s;}
+
+.live-ombak{
+  position:relative;
+  width:100%;
+  height:300px;
+  border-radius:8px;
+  overflow:hidden;
+  background:linear-gradient(180deg,#0f2027,#203a43,#2c5364);
+}
+.gelombang{
+  position:absolute;
+  bottom:0; left:0;
+  width:200%;
+  height:120px;
+  background:rgba(255,255,255,0.15);
+  border-radius:45%;
+  animation:ombak 8s linear infinite;
+}
+.gelombang2{
+  bottom:-10px;
+  background:rgba(255,255,255,0.1);
+  animation-duration:12s;
+}
+@keyframes ombak{
+  0%{ transform:translateX(0) rotate(0deg); }
+  100%{ transform:translateX(-50%) rotate(0deg); }
+}
+
+.live-partikel{
+  position:relative;
+  width:100%;
+  height:300px;
+  border-radius:8px;
+  overflow:hidden;
+  background:#0d0d0d;
+}
+.partikel{
+  position:absolute;
+  width:6px; height:6px;
+  background:#4CAF50;
+  border-radius:50%;
+  animation:naik linear infinite;
+}
+@keyframes naik{
+  0%{ transform:translateY(0); opacity:1; }
+  100%{ transform:translateY(-320px); opacity:0; }
+}
+
+.grid-live{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:20px;
+  margin-top:15px;
+}
+.kartu-live h4{
+  margin:8px 0 4px;
+  color:darkblue;
+}
+.kartu-live p{
+  margin:0;
+  font-size:13px;
+  color:#555;
+}
+
+/* Kucing dengan animasi bergerak */
+.kucing-wrapper{
+  animation:goyangKucing 4s ease-in-out infinite;
+  transform-origin:center bottom;
+}
+@keyframes goyangKucing{
+  0%,100%{ transform:rotate(0deg); }
+  50%{ transform:rotate(3deg); }
+}
+.mata{
+  animation:kedip 3s infinite;
+  transform-origin:center;
+}
+@keyframes kedip{
+  0%,90%,100%{ transform:scaleY(1); }
+  95%{ transform:scaleY(0.1); }
+}
+.kumis{
+  animation:goyangKumis 2.5s ease-in-out infinite;
+  transform-origin:left center;
+}
+@keyframes goyangKumis{
+  0%,100%{ transform:rotate(0deg); }
+  50%{ transform:rotate(4deg); }
+}
+
+/* ==== Testimoni ==== */
+.testimoni{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:15px;
+  margin:20px 0;
+}
+.kartu-testimoni{
+  background:#fafafa;
+  border-left:4px solid #4CAF50;
+  padding:12px 15px;
+  font-size:14px;
+  color:#444;
+}
+.kartu-testimoni b{
+  display:block;
+  margin-top:8px;
+  color:#222;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Wallverse</h1>
+<p>Ayo buat tampilan perangkat kalian lebih menarik!</p>
+</header>
+
+<div class="menu">
+<a href="index.html#beranda" class="active">Beranda</a>
+<a href="index.html#live">Wallpaper Live</a>
+<a href="galeri.html">Wallppaper</a>
+<a href="tentang.html">Tentang</a>
+</div>
+
+<div class="content">
+
+<div class="hero" id="beranda">
+<h2>Koleksi Wallpaper Bergerak & Foto Terbaik</h2>
+<p>Ribuan wallpaper live dan foto berkualitas tinggi, gratis untuk semua perangkat.</p>
+<a class="tombol" href="index.html#live">Lihat Wallpaper Live</a>
+</div>
+
+<div class="statistik">
+<div><h3>1.240+</h3><p>Wallpaper Live</p></div>
+<div><h3>3.560+</h3><p>Wallpaper Foto</p></div>
+<div><h3>18.900+</h3><p>Pengguna Aktif</p></div>
+<div><h3>4.8/5</h3><p>Rating Pengguna</p></div>
+</div>
+
+<h2 id="judul">Kategori Populer</h2>
+<div class="grid-kategori">
+  <div class="kategori-item">Abstrak</div>
+  <div class="kategori-item">Alam</div>
+  <div class="kategori-item">Hewan</div>
+  <div class="kategori-item">Kota</div>
+  <div class="kategori-item">Gaming</div>
+  <div class="kategori-item">Minimalis</div>
+</div>
+
+<p>
+Pengguna dapat menemukan wallpaper untuk berbagai kebutuhan, mulai dari
+<span class="highlight">Wallpaper Live</span>,
+<span class="highlight">Wallpaper Estetik</span>,
+dan
+<span class="highlight">Wallpaper Minimalis</span>.
+</p>
+
+<div style="background:lightblue;padding:15px;">
+<h3>Informasi</h3>
+<p>
+Wallpaper Live adalah wallpaper yang bergerak/beranimasi terus menerus selama
+ditampilkan di layar, berbeda dengan wallpaper foto biasa yang bersifat statis/diam.
+</p>
+</div>
+
+<h2 id="live">Wallpaper Live Pilihan</h2>
+<p>Semua pratinjau di bawah ini bergerak terus menerus selama halaman terbuka:</p>
+
+<div class="grid-live">
+
+  <div class="kartu-live">
+    <div class="live-wallpaper">
+      <div class="bulatan b1"></div>
+      <div class="bulatan b2"></div>
+      <div class="bulatan b3"></div>
+      <div class="bulatan b4"></div>
+    </div>
+    <h4>Gradient Aurora</h4>
+    <p>Kategori: Abstrak &middot; 2.3K unduhan</p>
+  </div>
+
+  <div class="kartu-live">
+    <div class="live-ombak">
+      <div class="gelombang"></div>
+      <div class="gelombang gelombang2"></div>
+    </div>
+    <h4>Ombak Malam</h4>
+    <p>Kategori: Alam &middot; 1.8K unduhan</p>
+  </div>
+
+  <div class="kartu-live">
+    <div class="live-partikel" id="wadah-partikel"></div>
+    <h4>Partikel Cahaya</h4>
+    <p>Kategori: Minimalis &middot; 3.1K unduhan</p>
+  </div>
+
+  <div class="kartu-live">
+    <div class="kucing-wrapper" style="text-align:center;">
+      <svg width="230" height="230">
+       <circle cx="115" cy="120" r="75" fill="#FFD699" stroke="black" stroke-width="3"/>
+       <polygon points="60,75 83,25 106,75" fill="#FFD699" stroke="black" stroke-width="3"/>
+       <polygon points="124,75 147,25 170,75" fill="#FFD699" stroke="black" stroke-width="3"/>
+       <circle class="mata" cx="92" cy="110" r="7" fill="black"/>
+       <circle class="mata" cx="138" cy="110" r="7" fill="black"/>
+       <polygon points="115,130 109,139 121,139" fill="pink"/>
+       <path d="M109 144 Q115 153 121 144" stroke="black" stroke-width="2" fill="none"/>
+       <line class="kumis" x1="62" y1="134" x2="98" y2="130" stroke="black"/>
+       <line class="kumis" x1="62" y1="143" x2="98" y2="143" stroke="black"/>
+       <line class="kumis" x1="132" y1="130" x2="168" y2="134" stroke="black"/>
+       <line class="kumis" x1="132" y1="143" x2="168" y2="143" stroke="black"/>
+      </svg>
+    </div>
+    <h4>Kucing Lucu Bergerak</h4>
+    <p>Kategori: Hewan &middot; 5.4K unduhan</p>
+  </div>
+
+</div>
+
+<div class="formulir">
+<h3>Unduh Wallpaper Live</h3>
+<form>
+<label>Nama</label>
+<br><input type="text">
+<br><br>
+<label>Pilih Wallpaper</label>
+<br>
+<select>
+<option>Gradient Aurora</option>
+<option>Ombak Malam</option>
+<option>Partikel Cahaya</option>
+<option>Kucing Lucu Bergerak</option>
+</select>
+<br><br>
+<label>Resolusi Layar</label>
+<br>
+<select>
+<option>1920x1080</option>
+<option>2560x1440</option>
+<option>3840x2160 (4K)</option>
+</select>
+<br><br>
+<input type="submit" value="Unduh">
+</form>
+</div>
+
+<h2>Apa Kata Pengguna</h2>
+<div class="testimoni">
+  <div class="kartu-testimoni">
+    "Wallpaper live-nya ringan dan nggak bikin laptop lemot."
+    <b>- Rahmad, Pengguna</b>
+  </div>
+  <div class="kartu-testimoni">
+    "Kucingnya lucu banget, jadi wallpaper favorit di HP saya."
+    <b>- Radhi, Pengguna</b>
+  </div>
+  <div class="kartu-testimoni">
+    "Koleksi galerinya lengkap, gampang dicari sesuai kategori."
+    <b>- Sairi, Pengguna</b>
+  </div>
+</div>
+
+</div>
+
+<footer>
+Copyright © 2026 Wallverse
+</footer>
+
+<script>
+// Membuat partikel bergerak naik terus-menerus untuk kartu "Partikel Cahaya"
+const wadah = document.getElementById('wadah-partikel');
+for(let i=0;i<25;i++){
+  const p = document.createElement('div');
+  p.className = 'partikel';
+  p.style.left = Math.random()*100 + '%';
+  p.style.bottom = '-10px';
+  p.style.animationDuration = (4 + Math.random()*4) + 's';
+  p.style.animationDelay = (Math.random()*5) + 's';
+  wadah.appendChild(p);
+}
+</script>
+
+</body>
+</html>

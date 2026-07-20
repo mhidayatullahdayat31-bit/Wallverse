@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Wallverse - Foto Wallpaper</title>
+<style>
+body{
+  font-family: Arial;
+  margin:0;
+  color:#222;
+}
+header{
+  background:linear-gradient(120deg,#0f172a,#1e3a5f,#0f766e,#134e4a);
+  background-size:300% 300%;
+  animation:headerGerak 12s ease infinite;
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+}
+header h1{
+  font-size:2.6em;
+  margin:0;
+  background:linear-gradient(90deg,#4ade80,#38bdf8,#a78bfa,#4ade80);
+  background-size:300% auto;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:teksGerak 6s linear infinite;
+  letter-spacing:1px;
+}
+header p{
+  color:#cbd5e1;
+  font-size:1.05em;
+  margin-top:10px;
+}
+@keyframes headerGerak{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+@keyframes teksGerak{
+  0%{background-position:0% center;}
+  100%{background-position:300% center;}
+}
+.menu{
+  background-color:#333;
+  text-align:center;
+  padding:15px;
+}
+.menu a{
+  color:white;
+  text-decoration:none;
+  padding:15px 25px;
+}
+.menu a:hover, .menu a.active{
+  background-color:#4CAF50;
+}
+.content{
+  width:80%;
+  float:left;
+  padding:20px;
+  box-sizing:border-box;
+}
+footer{
+  clear:both;
+  background:#666;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+#judul{
+  color:darkblue;
+}
+.highlight{
+  color:red;
+  font-weight:bold;
+}
+
+/* ==== Filter Kategori ==== */
+.filter-kategori{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:15px 0 10px;
+}
+.filter-kategori button{
+  border:1px solid #4CAF50;
+  background:white;
+  color:#4CAF50;
+  padding:8px 16px;
+  border-radius:20px;
+  cursor:pointer;
+  font-size:14px;
+}
+.filter-kategori button.aktif,
+.filter-kategori button:hover{
+  background:#4CAF50;
+  color:white;
+}
+
+/* ==== Grid Galeri ==== */
+.grid-galeri{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:15px;
+  margin-top:15px;
+}
+.kartu-foto{
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+  background:white;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
+  transition:transform 0.2s ease;
+}
+.kartu-foto:hover{
+  transform:scale(1.03);
+}
+.kartu-foto img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  display:block;
+}
+.info-foto{
+  padding:10px;
+}
+.info-foto p{
+  margin:0;
+  font-size:14px;
+  font-weight:bold;
+}
+.info-foto span{
+  font-size:12px;
+  color:#777;
+}
+
+/* ==== Tag Populer ==== */
+.tag-populer{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:15px 0;
+}
+.tag-populer span{
+  background:#eee;
+  padding:6px 12px;
+  border-radius:15px;
+  font-size:13px;
+  color:#444;
+}
+
+/* ==== Pagination ==== */
+.pagination{
+  text-align:center;
+  margin:25px 0;
+}
+.pagination a{
+  display:inline-block;
+  padding:8px 14px;
+  margin:0 3px;
+  border:1px solid #ccc;
+  border-radius:4px;
+  text-decoration:none;
+  color:#333;
+}
+.pagination a.aktif,
+.pagination a:hover{
+  background:#4CAF50;
+  color:white;
+  border-color:#4CAF50;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Wallverse</h1>
+<p>Foto Wallpaper</p>
+</header>
+
+<div class="menu">
+<a href="index.html#beranda">Beranda</a>
+<a href="index.html#live">Wallpaper Live</a>
+<a href="galeri.html" class="active">Wallpaper</a>
+<a href="tentang.html">Tentang</a>
+</div>
+
+<div class="content">
+
+<h2 id="judul">Foto Wallpaper</h2>
+<p>
+Kumpulan <span class="highlight">wallpaper foto statis</span> beresolusi tinggi
+yang bisa kamu lihat dan unduh. Berbeda dengan halaman Wallpaper Live, gambar
+di halaman ini tidak bergerak/diam.
+</p>
+
+<div class="filter-kategori">
+  <button class="aktif">Semua</button>
+  <button>Alam</button>
+  <button>Kota</button>
+  <button>Abstrak</button>
+  <button>Hewan</button>
+  <button>Minimalis</button>
+</div>
+
+<div class="grid-galeri">
+  <div class="kartu-foto">
+    <img src="https://picsum.photos/seed/gunung/400/300" alt="Wallpaper Pegunungan">
+    <div class="info-foto"><p>Pegunungan Berkabut</p><span>Alam &middot; 2.1K unduhan</span></div>
+  </div>
+  <div class="kartu-foto">
+    <img src="https://picsum.photos/seed/pantai/400/300" alt="Wallpaper Pantai">
+    <div class="info-foto"><p>Pantai Senja</p><span>Alam &middot; 3.4K unduhan</span></div>
+  </div>
+  <div class="kartu-foto">
+    <img src="https://picsum.photos/seed/hutan/400/300" alt="Wallpaper Hutan">
+    <div class="info-foto"><p>Hutan Pinus</p><span>Alam &middot; 1.7K unduhan</span></div>
+  </div>
+  <div class="kartu-foto">
+    <img src="https://picsum.photos/seed/kota/400/300" alt="Wallpaper Kota Malam">
+    <div class="info-foto"><p>Kota Malam</p><span>Kota &middot; 4.2K unduhan</span></div>
+  </div>
+  <div class="kartu-foto">
+    <img src="https://picsum.photos/seed/langit/400/300" alt="Wallpaper Langit">
+    <div class="info-foto"><p>Langit Senja</p><span>Alam &middot; 2.8K unduhan</span></div>
+  </div>
+  <div class="kartu-foto">
+    <img src="https://picsum.photos/seed/bunga/400/300" alt="Wallpaper Bunga">
+    <div class="info-foto"><p>Bunga Sakura</p><span>Alam &middot; 1.9K unduhan</span></div>
+  </div>
+  <div class="kartu-foto">
+    <img src="https://picsum.photos/seed/abstrak1/400/300" alt="Wallpaper Abstrak">
+    <div class="info-foto"><p>Pola Abstrak Warna</p><span>Abstrak &middot; 3.6K unduhan</span></div>
+  </div>
+  <div class="kartu-foto">
+    <img src="https://picsum.photos/seed/kucing2/400/300" alt="Wallpaper Kucing">
+    <div class="info-foto"><p>Kucing Oren Santai</p><span>Hewan &middot; 5.0K unduhan</span></div>
+  </div>
+  <div class="kartu-foto">
+    <img src="https://picsum.photos/seed/minimalis1/400/300" alt="Wallpaper Minimalis">
+    <div class="info-foto"><p>Garis Minimalis</p><span>Minimalis &middot; 1.4K unduhan</span></div>
+  </div>
+</div>
+
+<h3>Tag Populer</h3>
+<div class="tag-populer">
+  <span>#hd</span>
+  <span>#4k</span>
+  <span>#estetik</span>
+  <span>#gelap</span>
+  <span>#pastel</span>
+  <span>#malam</span>
+  <span>#alam</span>
+</div>
+
+<div class="pagination">
+  <a href="#" class="aktif">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">Berikutnya &raquo;</a>
+</div>
+
+</div>
+
+<footer>
+Copyright © 2026 Wallverse
+</footer>
+
+</body>
+</html>
